@@ -1,15 +1,31 @@
 {
-  "name": "app",
+  "name": "smart-so-app",
   "private": true,
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --loader:.js=jsx"
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --loader:.js=jsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.5",
+    "@mantine/charts": "^7.11.2",
+    "@mantine/core": "^7.11.2",
+    "@mantine/dates": "^7.11.2",
+    "@mantine/dropzone": "^7.11.2",
+    "@mantine/form": "^7.11.2",
+    "@mantine/hooks": "^7.11.2",
+    "@mantine/modals": "^7.11.2",
+    "dayjs": "^1.11.12",
     "esbuild": "^0.23.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.0"
-  }
+    "react-router-dom": "^6.26.0",
+    "recharts": "2"
+  },
+  "version": "1.0.0",
+  "description": "An app focused on service order",
+  "main": "index.js",
+  "repository": "git@github.com:lockland/smart-os-app.git",
+  "author": "Sidney Souza <sidneysase@gmail.com>",
+  "license": "MIT"
 }

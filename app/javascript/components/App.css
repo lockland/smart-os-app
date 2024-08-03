@@ -1,0 +1,19 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  color: var(--main-color);
+  background-color: var(--primary-background-color);
+  font-size: 0.9rem !important;
+
+  --navbar-selected-item: #162440;
+  --primary-background-color: #213547;
+  --initial-page-background: #293d55;
+  --generic-blue: #2C406E;
+  --orders-card-background-color: #027A7B;
+  --secondary-background-color: #93B4D7;
+  --button-color: #0505b8;
+  --main-color: azure;
+}

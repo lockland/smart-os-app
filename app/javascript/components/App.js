@@ -1,10 +1,10 @@
 import React from "react"
+import { Switch } from "@mantine/core"
+import "./App.css"
 
 function App() {
     return (
-      <>
-      This is my app component
-      </>
+        <Switch defaultChecked label="This is my app component with mantine" />
     )
 }
 
