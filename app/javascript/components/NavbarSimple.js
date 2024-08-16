@@ -1,27 +1,16 @@
 import React from "react"
 import { useState } from 'react';
-import { Group, Code, Center } from '@mantine/core';
-import {
-  IconBellRinging,
-  IconFingerprint,
-  IconKey,
-  IconSettings,
-  Icon2fa,
-  IconDatabaseImport,
-  IconReceipt2,
-  IconSwitchHorizontal,
-  IconLogout,
-} from '@tabler/icons-react';
+import { Center } from '@mantine/core';
 import classes from './NavbarSimple.module.css';
 
 const data = [
-  { link: '', label: 'Notifications', icon: IconBellRinging },
-  { link: '', label: 'Billing', icon: IconReceipt2 },
-  { link: '', label: 'Security', icon: IconFingerprint },
-  { link: '', label: 'SSH Keys', icon: IconKey },
-  { link: '', label: 'Databases', icon: IconDatabaseImport },
-  { link: '', label: 'Authentication', icon: Icon2fa },
-  { link: '', label: 'Other Settings', icon: IconSettings },
+  { link: '', label: 'Notifications' },
+  { link: '', label: 'Billing' },
+  { link: '', label: 'Security' },
+  { link: '', label: 'SSH Keys' },
+  { link: '', label: 'Databases' },
+  { link: '', label: 'Authentication' },
+  { link: '', label: 'Other Settings' },
 ];
 
 export default function NavbarSimple() {
@@ -38,7 +27,6 @@ export default function NavbarSimple() {
         setActive(item.label);
       }}
     >
-      <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
     </a>
   ));
@@ -49,18 +37,6 @@ export default function NavbarSimple() {
         <Center className={classes.header} size="xl"> Menu </Center>
         {links}
       </div>
-
-      {/* <div className={classes.footer}>
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
-          <span>Change account</span>
-        </a>
-
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <IconLogout className={classes.linkIcon} stroke={1.5} />
-          <span>Logout</span>
-        </a>
-      </div> */}
     </nav>
   );
 }
