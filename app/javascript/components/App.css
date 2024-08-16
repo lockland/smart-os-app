@@ -4,9 +4,9 @@
 }
 
 :root {
-  color: var(--main-color);
-  background-color: var(--primary-background-color);
-  font-size: 0.9rem !important;
+  /* color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1)); */
+  /* background-color: var(--primary-background-color); */
+  /* font-size: 0.9rem !important; */
 
   --navbar-selected-item: #162440;
   --primary-background-color: #213547;

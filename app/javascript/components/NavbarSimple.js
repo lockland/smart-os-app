@@ -2,33 +2,33 @@ import React from "react"
 import { useState } from 'react';
 import { Center } from '@mantine/core';
 import classes from './NavbarSimple.module.css';
+import { NavLink } from "react-router-dom";
 
 const data = [
-  { link: '', label: 'Notifications' },
-  { link: '', label: 'Billing' },
-  { link: '', label: 'Security' },
-  { link: '', label: 'SSH Keys' },
-  { link: '', label: 'Databases' },
-  { link: '', label: 'Authentication' },
-  { link: '', label: 'Other Settings' },
+  { link: '/empresa', label: 'Cadastro empresa' },
+  { link: '/funcionario', label: 'Cadastro funcionario' },
+  { link: '/custos', label: 'Cadastrar custo' },
+  { link: '/servico', label: 'Cadastrar servico' },
+  { link: '/nota-fiscal', label: 'Cadastro nota fiscal' },
+  { link: '/orcamento', label: 'Orçamento' },
 ];
 
 export default function NavbarSimple() {
-  const [active, setActive] = useState('Billing');
+  // const [active, setActive] = useState('Orçamento');
+  const [active, setActive] = useState('');
 
   const links = data.map((item) => (
-    <a
+    <NavLink
       className={classes.link}
       data-active={item.label === active || undefined}
-      href={item.link}
+      to={item.link}
       key={item.label}
       onClick={(event) => {
-        event.preventDefault();
         setActive(item.label);
       }}
     >
       <span>{item.label}</span>
-    </a>
+    </NavLink>
   ));
 
   return (

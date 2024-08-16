@@ -10,9 +10,11 @@ export default class extends Controller {
   connect() {
     console.log("react working")
     ReactDOM.createRoot(document.getElementById("app")).render(
-      <MantineProvider>
-        <App/>
-      </MantineProvider>
+      <React.StrictMode>
+        <MantineProvider withNormalizeCSS withCSSVariables>
+          <App />
+        </MantineProvider>
+      </React.StrictMode>
     )
   }
 }
