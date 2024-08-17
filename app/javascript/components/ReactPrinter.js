@@ -1,16 +1,6 @@
 import { Button, Center, Table } from "@mantine/core";
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
-
-const printArea = () => {
-  const printContents = document.getElementById("printable").innerHTML;
-  const currentContents = document.body.innerHTML
-
-  document.body.innerHTML = printContents
-  window.print()
-
-  document.body.innerHTML = currentContents
-}
 
 
 export default function ReactPrinter() {
@@ -23,9 +13,20 @@ export default function ReactPrinter() {
       .then(response => setEntries(response))
   }, [])
 
+  const componentRef = useRef(null)
+
+  const printArea = () => {
+    const printContents = componentRef.current.innerHTML;
+    const currentContents = document.body.innerHTML
+
+    document.body.innerHTML = printContents
+    window.print()
+    document.body.innerHTML = currentContents
+  }
+
   return (
     <div>
-      <div id="printable">
+      <div ref={componentRef}>
         <Center>Orçamento mês</Center>
         <Table striped highlightOnHover withTableBorder>
           <Table.Thead>
