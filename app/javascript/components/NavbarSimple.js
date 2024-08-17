@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from 'react';
 import { Center } from '@mantine/core';
 import classes from './NavbarSimple.module.css';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const data = [
   { link: '/empresa', label: 'Cadastro empresa' },
@@ -15,20 +15,20 @@ const data = [
 
 export default function NavbarSimple() {
   // const [active, setActive] = useState('Orçamento');
-  const [active, setActive] = useState('');
+  const [actived, setActived] = useState('');
 
   const links = data.map((item) => (
-    <NavLink
+    <Link
       className={classes.link}
-      data-active={item.label === active || undefined}
+      data-active={item.label === actived || undefined}
       to={item.link}
       key={item.label}
       onClick={(event) => {
-        setActive(item.label);
+        setActived(item.label);
       }}
     >
       <span>{item.label}</span>
-    </NavLink>
+    </Link>
   ));
 
   return (
