@@ -26,6 +26,7 @@ export default function ReactPrinter() {
 
   return (
     <div>
+      <Button onClick={printArea} >Imprimir</Button>
       <div ref={componentRef}>
         <Center>Orçamento mês</Center>
         <Table striped highlightOnHover withTableBorder>
@@ -57,8 +58,6 @@ export default function ReactPrinter() {
           </Table.Tbody>
         </Table>
       </div>
-
-      <Button onClick={printArea}>Imprimir</Button>
     </div>
   )
 
